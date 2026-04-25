@@ -213,7 +213,7 @@ describe('WorkspaceDomainsService', () => {
       expect(result?.id).toEqual('workspace-id');
     });
 
-    it('should return 1st workspace if multiple workspaces when IS_MULTIWORKSPACE_ENABLED=false', async () => {
+    it('should return first workspace if multiple workspaces exist when IS_MULTIWORKSPACE_ENABLED=false', async () => {
       jest
         .spyOn(twentyConfigService, 'get')
         .mockImplementation((key: string) => {
